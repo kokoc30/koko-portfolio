@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #0d1b2a;   /* Dark navy */
+  --secondary: #1b263b; /* Blue-gray background */
+  --accent: #e0e1dd;    /* Light sand */
+  --highlight: #778da9; /* Soft steel blue */
+  --text: #f0efeb;      /* Off-white text */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header#hero {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: var(--accent);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+header#hero h1 {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+header#hero h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--highlight);
+}
+
+header#hero p {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+header#hero .btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--highlight);
+  color: var(--secondary);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform .3s, background .3s;
+}
+
+header#hero .btn:hover {
+  transform: scale(1.05);
+  background: var(--accent);
+  color: var(--secondary);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--accent);
+}
+
+#about {
+  background: var(--primary);
+}
+
+#about .about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about img {
+  width: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+#about p {
+  color: var(--text);
+}
+
+.timeline {
+  display: grid;
+  gap: 2rem;
+}
+
+.timeline .card {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-left: 4px solid var(--highlight);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.cards .card {
+  background: var(--secondary);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+
+.skill {
+  background: var(--secondary);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.bar {
+  background: #415a77;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.bar div {
+  height: 100%;
+  background: var(--highlight);
+  border-radius: 4px;
+  transition: width 1s;
+}
+
+/* Removed old .projects-grid and .project styles */
+
+/* ===== NEW Certification Section ===== */
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cert-card {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 600px;
+}
+
+.cert-card img {
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+.cert-card h4 {
+  margin-bottom: .25rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.cert-card p {
+  margin: 0;
+  color: var(--text);
+}
+
+.cert-card .btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--highlight);
+  color: var(--secondary);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cert-card .btn:hover {
+  background: var(--accent);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  background: var(--primary);
+  border: 1px solid var(--highlight);
+  color: var(--text);
+  padding: .75rem;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  background: var(--highlight);
+  color: var(--secondary);
+  border: none;
+  cursor: pointer;
+  padding: .75rem;
+  border-radius: 5px;
+  transition: background .3s;
+}
+
+#contact-form button:hover {
+  background: var(--accent);
+}
+
+.socials {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.socials a {
+  margin: 0 .5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+.socials a:hover {
+  color: var(--highlight);
+}
+
+.socials a:hover { color: var(--highlight); }
